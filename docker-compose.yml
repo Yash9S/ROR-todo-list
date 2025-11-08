@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "9999:9999"
+    volumes:
+      - .:/app
+    command: bundle exec rails server -b 0.0.0.0 -p 9999
